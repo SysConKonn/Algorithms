@@ -1,2 +1,3 @@
 # Algorithms
-learning algorithms
+主要记录我平常学的一点点算法，主要是OI内容。
+内容不是很全，因为我的内容分得不是很整齐。

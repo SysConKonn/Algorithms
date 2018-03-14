@@ -1,0 +1,59 @@
+#include <set>
+#include <map>
+#include <stack>
+#include <cmath>
+#include <queue>
+#include <cstdio>
+#include <bitset>
+#include <string>
+#include <vector>
+#include <iomanip>
+#include <cstring>
+#include <iostream>
+#include <algorithm>
+#include <functional>
+using namespace std;
+int main()
+{
+        int n;
+        while(cin>>n,n)
+        {
+                map<int,int> mp;
+                mp.clear();
+                map<int,int>::iterator it;
+                mp[1000000000]=1;
+                for(int k=0;k<n;k++)
+                {
+                        int a,b;
+                        cin>>a>>b;
+                        cout<<a<<" ";
+                        it=mp.lower_bound(b);
+                        if(it==mp.end())
+                        {
+                                cout<<it->second<<endl;
+                        }
+                        else if(it==mp.begin())
+                        {
+                                cout<<it->second<<endl;
+                        }
+                        else
+                        {
+                                int y1=it->first;
+                                int x1=it->second;
+                                it--;
+                                int x2=it->second;
+                                int y2=it->first;
+                                if((b-y2)<=(y1-b))
+                                {
+                                        cout<<x2<<endl;
+                                }
+                                else
+                                {
+                                        cout<<x1<<endl;
+                                }
+                        }
+                        mp[b]=a;
+                }
+        }
+        return 0;
+}

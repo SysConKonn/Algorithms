@@ -1,0 +1,8 @@
+poj1741
+bzoj 2152
+luogu 4149
+bzoj 1095
+spoj 1825
+bzoj 1036
+bzoj 2243
+hdu 5405
