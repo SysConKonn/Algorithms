@@ -1,0 +1,34 @@
+#include <cstdio>
+#include <set>
+#include <cmath>
+#define MAX_N 100100
+#define INF 2147483647
+using namespace std;
+
+int N, a, g;
+struct node {
+  int s, id;
+  node (int s_, int id_) : s(s_), id(id_) {}
+  bool operator < (const node& rhs) const {
+    return s < rhs.s;
+  }
+};
+set<node> s;
+
+int main () {
+  while (scanf("%d", &N) == 1 && N != 0) {
+    s.clear();
+    scanf("%d%d", &a, &g);
+    printf("%d %d\n", a, 1);
+    s.insert(node(a, g));
+    for (int i = 3;i <= N + 2; ++i) {
+      scanf("%d%d", &a, &g);
+      node* pre_ = s.upper_bound(node(a, g))--;
+      node* nxt_ = s.lower_bound(node(a, g));
+      if (abs(pre_ -> s - g) > abs(nxt_ -> s - g)) printf("%d %d\n", a, nxt_ -> id);
+      else if (abs(pre_ -> s - g) < abs(nxt_ -> s - g)) printf("%d %d\n", a, pre_ -> id);
+      else printf("%d %d\n", a, min_(pre_, nxt_ ));
+    }
+  }
+  return 0;
+}

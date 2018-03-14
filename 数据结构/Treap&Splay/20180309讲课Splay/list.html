@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>一些题目</title>
+<!-- 2018-03-09 五 15:33 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="SysCon" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>f
+<script type="text/javascript" src="http://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">一些题目</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Problem 1</a></li>
+<li><a href="#sec-2">2. Problem 2</a></li>
+<li><a href="#sec-3">3. Problem 3</a></li>
+<li><a href="#sec-4">4. Problem 4</a></li>
+</ul>
+</div>
+</div>
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2018-03-09 五&gt;</span></span>
+</p>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Problem 1</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+<b>UVa11992 排列变换</b> <br  />
+</p>
+
+<p>
+原题地址：蓝书P<sub>242</sub>
+</p>
+
+<p>
+给出一个长度为N的序列，然后接下来有M个操作。  
+</p>
+
+<p>
+每个指令(a, b)表示将序列中一段区间[a, b]的数字进行翻转。  
+</p>
+
+<p>
+最后输出翻转M的序列。 
+</p>
+
+<p>
+比如说给出N，初始序列， M， 以及M个操作如下：
+</p>
+
+<p>
+<b>Sample Input</b>  
+</p>
+
+<p>
+7  
+</p>
+
+<p>
+1 2 3 4 5 6 7 
+</p>
+
+<p>
+3  
+</p>
+
+<p>
+1 3   
+</p>
+
+<p>
+2 4   
+</p>
+
+<p>
+5 7   
+</p>
+
+<p>
+<b>Sample Output</b> <br  />
+</p>
+
+<p>
+3 4 1 2 7 6 5  <br  />
+</p>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Problem 2</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+<b>BZOJ1208 宠物收养所</b> 
+</p>
+
+<p>
+原题地址<a href="http://www.lydsy.com/JudgeOnline/problem.php?id=1208">http://www.lydsy.com/JudgeOnline/problem.php?id=1208</a>
+</p>
+
+<p>
+<b>Description</b>
+</p>
+
+<p>
+最近，阿Q开了一间宠物收养所。收养所提供两种服务：收养被主人遗弃的宠物和让新的主人领养这些宠物。
+</p>
+
+<p>
+每个领养者都希望领养到自己满意的宠物，阿Q根据领养者的要求通过他自己发明的一个特殊的公式，
+</p>
+
+<p>
+得出该领养者希望领养的宠物的特点值a（a是一个正整数，a&lt;2<sup>31</sup> ），而他也给每个处在收养所的宠物一个特点值。
+</p>
+
+<p>
+这样他就能够很方便的处理整个领养宠物的过程了，宠物收养所总是会有两种情况发生：
+</p>
+
+<p>
+被遗弃的宠物过多或者是想要收养宠物的人太多，而宠物太少。 
+</p>
+
+<p>
+<b>1</b> ． 被遗弃的宠物过多时，假若到来一个领养者，这个领养者希望领养的宠物的特点值为a，那么它将会领养一只目前未被领养的宠物中特点值最接近a的一只宠物。
+</p>
+
+<p>
+（任何两只宠物的特点值都不可能是相同的，任何两个领养者的希望领养宠物的特点值也不可能是一样的）如果有两只满足要求的宠物，
+</p>
+
+<p>
+即存在两只宠物他们的特点值分别为a-b和a+b，那么领养者将会领养特点值为a-b的那只宠物。 
+</p>
+
+<p>
+<b>2</b> ． 收养宠物的人过多，假若到来一只被收养的宠物，那么哪个领养者能够领养它呢？能够领养它的领养者，是那个希望被领养宠物的特点值最接近该宠物特点值的领养者，
+</p>
+
+<p>
+如果该宠物的特点值为a，存在两个领养者他们希望领养宠物的特点值分别为a-b和a+b，
+</p>
+
+<p>
+那么特点值为a-b的那个领养者将成功领养该宠物。 
+</p>
+
+<p>
+一个领养者领养了一个特点值为a的宠物，而它本身希望领养的宠物的特点值为b，那么这个领养者的不满意程度为abs(a-b)。
+</p>
+
+<p>
+【任务描述】你得到了一年当中，领养者和被收养宠物到来收养所的情况，希望你计算所有收养了宠物的领养者的不满意程度的总和。
+</p>
+
+<p>
+这一年初始时，收养所里面既没有宠物，也没有领养者。
+</p>
+
+<p>
+<b>Input</b>
+</p>
+
+<p>
+第一行为一个正整数n，n&lt;=80000，表示一年当中来到收养所的宠物和领养者的总数。
+</p>
+
+<p>
+接下来的n行，按到来时间的先后顺序描述了一年当中来到收养所的宠物和领养者的情况。
+</p>
+
+<p>
+每行有两个正整数a, b，其中a=0表示宠物，a=1表示领养者，b表示宠物的特点值或是领养者希望领养宠物的特点值。
+</p>
+
+<p>
+（同一时间呆在收养所中的，要么全是宠物，要么全是领养者，这些宠物和领养者的个数不会超过10000个）
+</p>
+
+<p>
+<b>Output</b>
+</p>
+
+<p>
+仅有一个正整数，表示一年当中所有收养了宠物的领养者的不满意程度的总和mod 1000000以后的结果。
+</p>
+
+<p>
+<b>Sample Input</b>
+</p>
+
+<p>
+5
+</p>
+
+<p>
+0 2
+</p>
+
+<p>
+0 4
+</p>
+
+<p>
+1 3
+</p>
+
+<p>
+1 2
+</p>
+
+<p>
+1 5
+</p>
+
+
+<p>
+<b>Sample Output</b>
+</p>
+
+<p>
+3
+(abs(3-2) + abs(2-4)=3，最后一个领养者没有宠物可以领养)
+</p>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Problem 3</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+<b>BZOJ1500 维修数列</b> <br  />
+原题地址<a href="http://www.lydsy.com/JudgeOnline/problem.php?id=1500">http://www.lydsy.com/JudgeOnline/problem.php?id=1500</a>。
+</p>
+
+<p>
+<b>Description</b>
+</p>
+
+<p>
+请写一个程序，要求维护一个数列，支持以下 6 种操作：
+</p>
+
+<ol class="org-ol">
+<li>插入 INSERT pos<sub>i</sub> tot c<sub>1</sub> c<sub>2</sub> &#x2026; c<sub>tot</sub>    在当前数列的第pos<sub>i</sub> 个数字后插入tot个数c<sub>1</sub> ~　c<sub>tot。</sub>  
+</li>
+
+<li>删除 DELETE pos<sub>i</sub> tot    删除从序列第pos<sub>i</sub> 个数字开始的连续tot个数字。  
+</li>
+
+<li>修改 MAKE-SAME pos<sub>i</sub> tot c   将从第pos<sub>i</sub> 个数字开始的连续tot个数字全都改成c。
+</li>
+
+<li>翻转 REVERSE pos<sub>i</sub> tot   取出当前数列的第pos<sub>i</sub> 个位置开始的连续tot个数字并且将他们翻转后放回原位置。  
+</li>
+
+<li>求和 GET-SUM pos<sub>i</sub> tot   计算从序列第pos<sub>i</sub> 个位置开始的连续tot个数字的和。 
+</li>
+
+<li>求 和最大的子列  MAX-SUM   求出当前数列中和最大的一段连续子列，并且输出最大和。  
+</li>
+</ol>
+
+<p>
+<b>Input</b>
+</p>
+
+<p>
+输入的第1 行包含两个数N 和M(M ≤20 000)，N 表示初始时数列中数的个数，M表示要进行的操作数目。
+</p>
+
+<p>
+第2行包含N个数字，描述初始时的数列。
+</p>
+
+<p>
+以下M行，每行一条命令，格式参见问题描述中的表格。
+</p>
+
+<p>
+任何时刻数列中最多含有500 000个数，数列中任何一个数字均在[-1 000, 1 000]内。
+</p>
+
+<p>
+插入的数字总数不超过4 000 000个，输入文件大小不超过20MBytes。
+</p>
+
+<p>
+<b>Output</b>
+</p>
+
+<p>
+对于输入数据中的GET-SUM和MAX-SUM操作，向输出文件依次打印结果，每个答案（数字）占一行。
+</p>
+
+<p>
+<b>Sample Input</b>
+</p>
+
+<p>
+9 8
+</p>
+
+<p>
+2 -6 3 5 1 -5 -3 6 3
+</p>
+
+<p>
+GET-SUM 5 4
+</p>
+
+<p>
+MAX-SUM
+</p>
+
+<p>
+INSERT 8 3 -5 7 2
+</p>
+
+<p>
+DELETE 12 1
+</p>
+
+<p>
+MAKE-SAME 3 3 2
+</p>
+
+<p>
+REVERSE 3 6
+</p>
+
+<p>
+GET-SUM 5 4
+</p>
+
+<p>
+MAX-SUM
+</p>
+
+<p>
+<b>Sample Output</b>
+</p>
+
+<p>
+-1
+</p>
+
+<p>
+10
+</p>
+
+<p>
+1
+</p>
+
+<p>
+10
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Problem 4</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+原题地址:<a href="http://www.lydsy.com/JudgeOnline/problem.php?id=1014">http://www.lydsy.com/JudgeOnline/problem.php?id=1014</a>
+</p>
+
+<p>
+<b>Description</b>
+</p>
+
+<p>
+　　火星人最近研究了一种操作：求一个字串两个后缀的公共前缀。比方说，有这样一个字符串：madamimadam，
+</p>
+
+<p>
+我们将这个字符串的各个字符予以标号：序号： 1 2 3 4 5 6 7 8 9 10 11 字符 m a d a m i m a d a m 现在，
+</p>
+
+<p>
+火星人定义了一个函数LCQ(x, y)，表示：该字符串中第x个字符开始的字串，与该字符串中第y个字符开始的字串
+</p>
+
+<p>
+，两个字串的公共前缀的长度。比方说，LCQ(1, 7) = 5, LCQ(2, 10) = 1, LCQ(4, 7) = 0 在研究LCQ函数的过程
+</p>
+
+<p>
+中，火星人发现了这样的一个关联：如果把该字符串的所有后缀排好序，就可以很快地求出LCQ函数的值；同样，
+</p>
+
+<p>
+如果求出了LCQ函数的值，也可以很快地将该字符串的后缀排好序。 尽管火星人聪明地找到了求取LCQ函数的快速
+</p>
+
+<p>
+算法，但不甘心认输的地球人又给火星人出了个难题：在求取LCQ函数的同时，还可以改变字符串本身。具体地说
+</p>
+
+<p>
+，可以更改字符串中某一个字符的值，也可以在字符串中的某一个位置插入一个字符。地球人想考验一下，在如此
+</p>
+
+<p>
+复杂的问题中，火星人是否还能够做到很快地求取LCQ函数的值。
+</p>
+
+<p>
+<b>Input</b>
+</p>
+
+<p>
+　　第一行给出初始的字符串。第二行是一个非负整数M，表示操作的个数。接下来的M行，每行描述一个操作。操
+</p>
+
+<p>
+作有3种，如下所示
+</p>
+
+<p>
+1、询问。语法：Qxy，x,y均为正整数。功能：计算LCQ(x,y)限制：1&lt;=x,y&lt;=当前字符串长度。
+</p>
+
+<p>
+2、修改。语法：Rxd，x是正整数，d是字符。功能：将字符串中第x个数修改为字符d。限制：x不超过当前字
+</p>
+
+<p>
+符串长度。
+</p>
+
+<p>
+3、插入：语法：Ixd，x是非负整数，d是字符。功能：在字符串第x个字符之后插入字符d，如果x=0，则在字
+</p>
+
+<p>
+符串开头插入。限制：x不超过当前字符串长度
+</p>
+
+<p>
+<b>Output</b>
+</p>
+
+<p>
+　　对于输入文件中每一个询问操作，你都应该输出对应的答案。一个答案一行。
+</p>
+
+<p>
+<b>Sample Input</b>
+</p>
+
+<p>
+madamimadam
+7
+</p>
+
+
+<p>
+Q 1 7
+</p>
+
+<p>
+Q 4 8
+</p>
+
+<p>
+Q 10 11
+</p>
+
+<p>
+R 3 a
+</p>
+
+<p>
+Q 1 7
+</p>
+
+<p>
+I 10 a
+</p>
+
+<p>
+Q 2 11
+</p>
+
+
+<p>
+<b>Sample Output</b>
+</p>
+
+<p>
+5
+</p>
+
+<p>
+1
+</p>
+
+<p>
+0
+</p>
+
+<p>
+2
+</p>
+
+<p>
+1
+</p>
+
+<p>
+<b>HINT</b>
+</p>
+
+<p>
+1、所有字符串自始至终都只有小写字母构成。
+</p>
+
+<p>
+2、M&lt;=150,000
+</p>
+
+<p>
+3、字符串长度L自始至终都满足L&lt;=100,000
+</p>
+
+<p>
+4、询问操作的个数不超过10,000个。
+</p>
+
+<p>
+对于第1，2个数据，字符串长度自始至终都不超过1,000
+</p>
+
+<p>
+对于第3，4，5个数据，没有插入操作。
+</p>
+
+
+
+<p>
+<b>Emacs 25.3.1 (Org mode 8.2.10)</b>
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: SysCon</p>
+<p class="date">Created: 2018-03-09 五 15:33</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.3.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

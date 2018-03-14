@@ -1,0 +1,103 @@
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
+#+HTML_HEAD: <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>f
+#+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
+#+TITLE: list^solutions
+#+AUTHOR: SysCon
+
+ <2018-03-09 五>
+
+* Options
+*首先说一说一个很重要的操作。*
+
+** rotate (x, k):
+将x往上翻转一下。 
+
+首先假设x的父亲为y。
+
+假设x的它父亲的a(a为l或r)儿子，那么将y父亲设为x的父亲，y的父亲设为x。
+
+然后将x的a^1(如果x是y的右儿子那么a^1就是左儿子)儿子的父亲设为y同时将y的a儿子变成x的a^1儿子。
+
+最后将x的a^1儿子变成y就行。
+
+** splay(x, k):
+
+将节点x旋转到点k并且不改变区间顺序并且保证每个节点维护的值是正确的。
+
+一般来说Splay是将某个点旋转到根节点。‘
+
+翻转规则:
+
+如果x的父亲就是k，则直接将x和父亲翻转一下。
+
+不然的话。。。
+
+设y为x的父亲，z为y的父亲。
+
+如果x, y, z三点共线，那么先旋转y, z，此时x的父亲变成了z，然后旋转x, z，使x在y， z的上面。
+
+如果三点不共线，那么旋转两次x即可。
+
+** split(l, r):
+就是将原序列中区间[l,r]分离成splay中的一棵单独子树，如何做到请自己想一想。
+
+* Problem 1
+UVa11922
+
+splay模板中的模板题
+
+翻转就直接split那一段区间，然后每次操作到某一个节点之前先pushdown()更新下面的节点信息（其实就是将翻转标记推到下面一层的子树顶点）
+
+最后输出就直接那啥那啥一下就行了。
+
+* Problem 2
+BZOJ1208 宠物收养所
+
+splay模板题
+
+用一棵Splay维护当前待在宠物店中的生物，很显然，对于任意一个时间两种生物的数量不可能同时大于1。
+
+每次输入某个点就判断和当前Splay标记是否相同，如果相同，说明和待在店中的生物是相同的，没有某一个生物可以离开，直接加入Splay。
+
+如果不同，说明新进入的生物肯定会被店中的取走或者会取走店中的一个。
+
+此时在Splay中查询当前新进生物的权值在Splay中的前驱和后继然后统计答案。
+
+* Problem 3
+BZOJ1500 维修数列 
+
+splay模板题 
+
+先将需要的区间[l, r]通过split(l, r - l +１)分离出来再进行操作。 
+
+求最大子列和，使用lx[], rx[], 分别维护子树所在连续区间从最左边开始的和最大区间和从最右边开始的和最大区间。mx[]维护整棵子树最大子列和。
+
+翻转直接在区间总顶点打个翻转标记表示整棵子树都应该翻转。
+
+插入，split(pos_i, pos_i + 1)之后插入c_1~c_tot组成的一整棵子树。
+
+删除，split(pos_i, pos_i +　tot) 然后直接删除分离出的一颗子树update它的父亲和爷爷。
+
+求和，split(pos_i, pos_i + tot) 然后直接输出分离出的子树顶点所维护的整个子树的和。
+
+* Problem 4
+BZOJ1014 火星人prefix 
+
+*Splay+二分答案+hash*
+
+详细一点，就是因为每颗子树肯定是一段连续的区间，所以每个点可以维护其子树的hash值。
+
+（其实就是一段子串的hash值），这样子就十分容易了。
+
+修改操作：就按splay的修改就行，记得update；
+
+插入操作：等同于split（[l, l + 1]）这个区间，然后加一个叶子节点更新父亲和爷爷。
+
+查询操作：二分LCP的长度，设为mid,则将两个区间（[l_1, l_1 + mid], [l_2, l_2 + mid]）
+
+分别split之后查询顶点维护的hash值。
+
+
+
+*Emacs 25.3.1 (Org mode 8.2.10)*
